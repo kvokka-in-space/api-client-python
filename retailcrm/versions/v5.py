@@ -90,6 +90,13 @@ class Client(Base):
 
         return self.post('/costs/' + str(cost['id']) + '/edit')
 
+    def credentials(self):
+        """
+        :return: Response
+        """
+
+        return self.post('/credentials')
+
     def custom_fields(self, filters=None, limit=20, page=1):
         """
         :param filters: object
